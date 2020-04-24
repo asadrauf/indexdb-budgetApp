@@ -35,9 +35,11 @@ function saveRecord(record) {
 
 function checkDatabase() {
   // open a transaction on your pending db
+  const transaction = db.transaction(["pending"], "readwrite");
   // access your pending object store
+  const store = transaction.objectStore("pending");
   // get all records from store and set to a variable
-  const getRequestAll = pending.getAll();
+  const getAll = store.getAll();
   getAll.onsuccess = function() {
     if (getAll.result.length > 0) {
       fetch("/api/transaction/bulk", {
@@ -50,9 +52,9 @@ function checkDatabase() {
       })
       .then(response => response.json())
       .then(() => {
-          // if successful, open a transaction on your pending db
-          // access your pending object store
-          // clear all items in your store
+        const transaction = db.transaction(["pending"], "readwrite");
+        const store = transaction.objectStore("pending");
+        store.clear();
       });
     }
   };
