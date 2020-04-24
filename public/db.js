@@ -1,3 +1,5 @@
+import { startSession } from "mongoose";
+
 let db;
 // create a new db request for a "budget" database.
 const request = indexedDB.open("budget", 1);
@@ -19,12 +21,16 @@ request.onsuccess = function(event) {
 
 request.onerror = function(event) {
   // log error here
+  console.log("something went wrong" + event.target.errorCode);
 };
 
 function saveRecord(record) {
   // create a transaction on the pending db with readwrite access
+  const transaction = db.transaction(["pending"], "readwrite");
   // access your pending object store
+  const store = transaction.objectStore("pending");
   // add record to your store with add method.
+  store.add(record);
 }
 
 function checkDatabase() {
