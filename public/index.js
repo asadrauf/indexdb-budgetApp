@@ -51,7 +51,7 @@ function populateChart() {
   });
 
   // create incremental values for chart
-  const data = reversed.map(t => {
+  let data = reversed.map(t => {
     sum += parseInt(t.value);
     return sum;
   });
@@ -61,7 +61,7 @@ function populateChart() {
     myChart.destroy();
   }
 
-  const ctx = document.getElementById("my-chart").getContext("2d");
+  let ctx = document.getElementById("my-chart").getContext("2d");
 
   myChart = new Chart(ctx, {
     type: "line",
@@ -93,7 +93,7 @@ function sendTransaction(isAdding) {
   }
 
   // create record
-  const transaction = {
+  let transaction = {
     name: nameEl.value,
     value: amountEl.value,
     date: new Date().toISOString()
