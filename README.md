@@ -1,4 +1,4 @@
-## Heroku Deployed link --> https://app-budget-index-db.herokuapp.com/       
+## Heroku Deployed link --> https://service-worker-appbudget.herokuapp.com/       
 ### indexdb-budgetApp ![Maintained](https://img.shields.io/badge/workout-tracker-yellowgreen) ![Maintained](https://img.shields.io/badge/UNC-bootCamp-blue)
 
 > ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) #Implementing IndexedDB so the budget tracker persists data even when the device is not online. When the device finally reconnects, any pending transactions will be synced with the backend api.
