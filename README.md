@@ -1,10 +1,10 @@
 ## Heroku Deployed link --> https://service-worker-appbudget.herokuapp.com/       
 ### indexdb-budgetApp ![Maintained](https://img.shields.io/badge/workout-tracker-yellowgreen) ![Maintained](https://img.shields.io/badge/UNC-bootCamp-blue)
 
-> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) #Implementing IndexedDB so the budget tracker persists data even when the device is not online. When the device finally reconnects, any pending transactions will be synced with the backend api.
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) #Budget Tracker application to allow for offline access and functionality.  The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online. Implementing IndexedDB and service worker so the budget tracker persists data even when the device is not online. When the device finally reconnects, any pending transactions will be synced with the backend api.
 
 These are the programming languages that we used to built this application
-**node.js and mongodb and express**
+**node.js and mongodb and express indexdb service worker**
 
 
 ![Project Version](https://img.shields.io/badge/Version-version1.1-blue)  ![Documentation](https://img.shields.io/badge/Documentation-Yes-yellowgreen) ![Maintained](https://img.shields.io/badge/Maintained-Yes-yellowgreen)  ![License](https://img.shields.io/badge/License-MIT-green)
